@@ -9,7 +9,9 @@ class database{
 		//mysql_connect($this->host, $this->uname, $this->pass);
 		//mysql_select_db($this->db);
     }
-    
+    function con(){
+        $mysqli = mysqli_connect("remotemysql.com", "kZXrSwhZy7", "SLjmGMemEO", "kZXrSwhZy7");
+    }
     function tampil_data(){
         $mysqli = mysqli_connect("remotemysql.com", "kZXrSwhZy7", "SLjmGMemEO", "kZXrSwhZy7");
         $data = $mysqli->query("select * from mahasiswa");
