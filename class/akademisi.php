@@ -1,20 +1,16 @@
 <?php
  class akademisi{
-     function lapor(){
-         
-     }
+    function __construct(){
+
+    }
+    public function lapor($kodebrg, $deskripsi, $foto, $tipe, $lokasi){
+        include 'database.php';
+        $mysqli = mysqli_connect("remotemysql.com", "kZXrSwhZy7", "SLjmGMemEO", "kZXrSwhZy7");
+        if (!$mysqli) {
+            die("Koneksi gagal: " . mysqli_connect_error());
+        }
+        echo "Koneksi berhasil";
+        $result = $mysqli->query("INSERT INTO Laporan_Kerusakan VALUES('$kodebrg', '$deskripsi', '$foto', '$tipe', '$lokasi')");      
+    }
  }
 ?>
-<form method="POST" action="" name="lapor">
-    Kode Baranga:
-        <input type="text" name="kode_barang"/><br>
-    Deskripsi :
-        <input type="text" name="deskripsi"/><br>
-    Bukti Foto :
-        <input type="file" name="bukti"/><br>
-    Tipe :
-        <input type="text" name="tipe"/><br>
-    Lokasi :
-        <input type="text" name="lokasi"/><br>
-        <input type="submit" value="submit"/>
-</form>

@@ -12,7 +12,7 @@ class database{
     
     function tampil_data(){
         $mysqli = mysqli_connect("remotemysql.com", "kZXrSwhZy7", "SLjmGMemEO", "kZXrSwhZy7");
-        $data = $mysqli->query("select * from mahasiswa");
+        $data = $mysqli->query("select * from inventaris");
         while($d = mysqli_fetch_array($data, MYSQLI_ASSOC)){
             $hasil[] = $d;
         }
@@ -42,7 +42,7 @@ class database{
                 $_SESSION['username'] = $username;
                 $_SESSION['Tipe'] = "Pengurus";
                 // alihkan ke halaman dashboard pegawai
-                header("location:tampil.php");
+                header("location: form/form_list.php");
             }else{
          
                 // alihkan ke halaman login kembali

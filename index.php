@@ -1,5 +1,5 @@
 <?php
-include "guest.php";
+include 'class/guest.php';
 $guest = new guest();
 $guest->login();
 ?>

@@ -15,12 +15,11 @@
 if(isset($_POST['lapor'])){
     $kode_barang = $_POST['kode_barang'];
     $deskripsi = $_POST['deskripsi'];
-    $foto = $_FILES['bukti']['name'];;
+    $foto = $_POST['bukti'];
     $tipe = $_POST['tipe'];
     $lokasi = $_POST['lokasi'];
     $ak= new akademisi();
     $ak->lapor($kode_barang, $deskripsi, $foto, $tipe, $lokasi);
-    move_uploaded_file($_FILES['bukti']['tmp_name'], "gambar/".$_FILES['bukti']['name']);
     echo"<script>alert('Gambar Berhasil diupload !');history.go(-1);</script>";
 }
 ?>
