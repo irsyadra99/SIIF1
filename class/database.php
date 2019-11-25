@@ -34,7 +34,7 @@ class database{
                 $_SESSION['username'] = $username;
                 $_SESSION['Tipe'] = "Akademisi";
                 // alihkan ke halaman dashboard admin
-                header("location:akademisi.php");
+                header("location: form/form_lapor.php");
          
             // cek jika user login sebagai pegawai
             }else if($data['Tipe']=="Pengurus"){
