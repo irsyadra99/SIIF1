@@ -6,7 +6,7 @@
  }
 ?>
 <form method="POST" action="" name="lapor">
-    Kode Barang :
+    Kode Baranga:
         <input type="text" name="kode_barang"/><br>
     Deskripsi :
         <input type="text" name="deskripsi"/><br>
