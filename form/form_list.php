@@ -31,7 +31,7 @@
         <td><?php echo $x['jumlah']; ?></td>
         <td><?php echo $x['lokasi']; ?></td>
         <td><?php echo $x['tipe_barang']; ?></td>
-		<td><a href="edit.php?id=<?php echo $x['id']; ?>&aksi=Edit">Edit</a></td>
+		<td><a href="form_edit.php?id=<?php echo $x['id']; ?>&aksi=Edit">Edit</a></td>
 		<td><a href="proses.php?id=<?php echo $x['id']; ?>&aksi=Hapus">Hapus</a></td>
 	</tr>
 	<?php 
