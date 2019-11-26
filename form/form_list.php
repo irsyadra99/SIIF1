@@ -7,6 +7,7 @@
 <a href="input.php">Input Data</a>
 <table border="1">
 	<tr>
+		<th>No</th>
 		<th>Nama Model</th>
 		<th>Kode Barang</th>
 		<th>Tanggal Masuk</th>
@@ -30,10 +31,8 @@
         <td><?php echo $x['jumlah']; ?></td>
         <td><?php echo $x['lokasi']; ?></td>
         <td><?php echo $x['tipe_barang']; ?></td>
-		<td>
-			<a href="edit.php?id=<?php echo $x['id']; ?>&aksi=edit">Edit</a>
-			<a href="proses.php?id=<?php echo $x['id']; ?>&aksi=hapus">Hapus</a>			
-		</td>
+		<td><a href="edit.php?id=<?php echo $x['id']; ?>&aksi=Edit">Edit</a></td>
+		<td><a href="proses.php?id=<?php echo $x['id']; ?>&aksi=Hapus">Hapus</a></td>
 	</tr>
 	<?php 
 	}

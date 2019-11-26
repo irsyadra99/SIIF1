@@ -12,7 +12,7 @@ class database{
     
     function tampil_data(){
         $mysqli = mysqli_connect("remotemysql.com", "kZXrSwhZy7", "SLjmGMemEO", "kZXrSwhZy7");
-        $data = $mysqli->query("select * from inventaris");
+        $data = $mysqli->query("SELECT * FROM Inventaris");
         while($d = mysqli_fetch_array($data, MYSQLI_ASSOC)){
             $hasil[] = $d;
         }
