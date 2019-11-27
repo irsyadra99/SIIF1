@@ -5,12 +5,8 @@ class laporanK{
 
     }
     function laporan_kerusakan($kodebrg, $deskripsi, $foto, $tipe, $lokasi){
-        session_start();
         $mysqli = mysqli_connect("remotemysql.com", "kZXrSwhZy7", "SLjmGMemEO", "kZXrSwhZy7");
-        if (!$mysqli) {
-            die("Koneksi gagal: ".mysqli_connect_error());
-        }
-        $hasil = $mysqli->query("INSERT INTO Laporan_Kerusakan VALUES('','$kodebrg', '$deskripsi', '$foto', '$tipe', '$lokasi')");   
+        $hasil = $mysqli->query("INSERT INTO Laporan_Kerusakan ('idLaporanK','kode_barang', 'deskripsi', 'foto', 'tipe_barang', 'lokasi') VALUES('','$kodebrg', '$deskripsi', '$foto', '$tipe', '$lokasi')");   
         if(!$hasil){ 
             header("location:../form/form_edit.php");
         }else{

@@ -6,7 +6,7 @@ $guest->login();
 <html>
 <form method="POST" action="" name="login">
     <tr>
-        <th>Email or Username</th>
+        <th>Username</th>
         <td> : </td>
         <td>
             <input type="text" name="username"/>
@@ -24,13 +24,6 @@ $guest->login();
         <td> </td>
         <td>
             <input type="submit" value="Login"/>
-        </td>
-    </tr>
-    <tr>
-        <th>Don't have account?</th>
-        <td> : </td>
-        <td>
-            <a href="./register.php"><b>Register Now</b></a> <br>
         </td>
     </tr>
 </form>

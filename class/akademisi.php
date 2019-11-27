@@ -7,7 +7,6 @@
     function lapor(){
         session_start();
         $db = new laporanK();
- 
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $db->laporan_kerusakan($_POST['kode_barang'], $_POST['deskripsi'], $_POST['bukti'], $_POST['tipe'], $_POST['lokasi']);
