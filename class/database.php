@@ -52,6 +52,5 @@ class database{
             header("location:index.php?pesan=gagal");
         }
     }
- 
 } 
 ?>

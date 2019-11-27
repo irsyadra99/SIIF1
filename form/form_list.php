@@ -2,8 +2,7 @@
     include '../class/database.php';
     $db = new database();
 ?>
-<h3>Data User</h3>
- 
+<h3>Data Inventaris</h3>
 <a href="input.php">Input Data</a>
 <table border="1">
 	<tr>

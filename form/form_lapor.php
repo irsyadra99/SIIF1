@@ -1,15 +1,11 @@
-<?php
-    include '../class/akademisi.php';
-    $ak= new akademisi();
-?>
 <html>
-<form method="POST" action="" name="lapor">
+<form method="POST" name="lapor">
     Kode Barang :
         <input type="text" name="kode_barang"/><br>
     Deskripsi :
         <input type="text" name="deskripsi"/><br>
     Bukti Foto :
-        <input type="file" name="bukti"/><br>
+        <input type="text" name="bukti"/><br>
     Tipe :
         <input type="text" name="tipe"/><br>
     Lokasi :
@@ -18,13 +14,19 @@
 </form>
 </html>
 <?php
-if(isset($_POST['lapor'])){
-    // $kode_barang = $_POST['kode_barang'];
-    // $deskripsi = $_POST['deskripsi'];
-    // $foto = $_POST['bukti'];
-    // $tipe = $_POST['tipe'];
-    // $lokasi = $_POST['lokasi'];
-    $ak->lapor($_POST['kode_barang'], $_POST['deskripsi'], $_POST['bukti'], $_POST['tipe'], $_POST['lokasi']);
-    
-}
+    include '../class/akademisi.php';
+    $ak= new akademisi();
+    $ak->lapor();
+    // if ($_SERVER["REQUEST_METHOD"] == "POST")
+    //     {
+    //         $ak->lapor($_POST['kode_barang'], $_POST['deskripsi'], $_POST['bukti'], $_POST['tipe'], $_POST['lokasi']);
+    //     }
+    //if(isset($_POST['lapor'])){
+        // $kode_barang = $_POST['kode_barang'];
+        // $deskripsi = $_POST['deskripsi'];
+        // $foto = $_POST['bukti'];
+        // $tipe = $_POST['tipe'];
+        // $lokasi = $_POST['lokasi'];
+        // $ak->lapor($kode_barang, $deskripsi, $foto, $tipe, $lokasi);
+    //}
 ?>
