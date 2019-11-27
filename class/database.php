@@ -52,5 +52,9 @@ class database{
             header("location:index.php?pesan=gagal");
         }
     }
+
+    function get_laporanKerusakan(){
+        
+    }
 } 
 ?>
