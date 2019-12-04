@@ -10,7 +10,7 @@ class guest {
  
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $db->check_login($_POST['username'], $_POST['password']);
+            $db->cek_login($_POST['username'], $_POST['password']);
         }
     }
 }

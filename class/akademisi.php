@@ -1,11 +1,12 @@
 <?php
- include 'laporan_kerusakan.php';
+
  class akademisi{
     function __construct(){
 
     }
     function lapor(){
         session_start();
+        include 'laporan_kerusakan.php';
         $db = new laporanK();
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {

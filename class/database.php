@@ -1,10 +1,6 @@
 <?php 
 class database{
- 
-	var $host = "remotemysql.com";
-	var $uname = "kZXrSwhZy7";
-	var $pass = "SLjmGMemEO";
-	var $db = "kZXrSwhZy7";
+
 	function __construct(){
 		//mysql_connect($this->host, $this->uname, $this->pass);
 		//mysql_select_db($this->db);
@@ -18,7 +14,7 @@ class database{
         }
         return $hasil;
     }
-    public function check_login($username, $password)
+    public function cek_login($username, $password)
     {
         $mysqli = mysqli_connect("remotemysql.com", "kZXrSwhZy7", "SLjmGMemEO", "kZXrSwhZy7");
         $result = $mysqli->query("SELECT * from mahasiswa WHERE username = '$username' AND password = '$password'");
